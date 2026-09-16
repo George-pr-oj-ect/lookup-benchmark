@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lookup Benchmark</title>
+</head>
+<body>
+    <div class="lab">
+        <p class="kicker">O(n) vs O(1)</p>
+        <h1>Instant Contact Lookup</h1>
+        <p class="subtitle">Search 50,000 contacts two ways and watch the time difference</p>
+
+        <div class="search-row">
+            <input type="number" class="search-id" placeholder="Enter an ID (0 - 50000)">
+            <button class="run-btn">Run Search</button>
+        </div>
+
+        <div class="results">
+            <div class="result-card array-card">
+                <p class="method">Array .find()</p>
+                <p class="complexity">O(n)</p>
+                <p class="time array-time">—</p>
+                <div class="bar-track"><div class="bar array-bar"></div></div>
+            </div>
+
+            <div class="result-card map-card">
+                <p class="method">Hash Map lookup</p>
+                <p class="complexity">O(1)</p>
+                <p class="time map-time">—</p>
+                <div class="bar-track"><div class="bar map-bar"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
